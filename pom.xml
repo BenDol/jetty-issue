@@ -129,6 +129,24 @@
           <launcherDir>${webappDirectory}</launcherDir>
         </configuration>
 
+        <dependencies>
+          <dependency>
+            <groupId>com.google.gwt</groupId>
+            <artifactId>gwt-servlet</artifactId>
+            <version>${gwt.version}</version>
+          </dependency>
+          <dependency>
+            <groupId>com.google.gwt</groupId>
+            <artifactId>gwt-dev</artifactId>
+            <version>${gwt.version}</version>
+          </dependency>
+          <dependency>
+            <groupId>com.google.gwt</groupId>
+            <artifactId>gwt-user</artifactId>
+            <version>${gwt.version}</version>
+          </dependency>
+        </dependencies>
+
         <!--Replaced the existing executions block-->
         <executions>
           <execution>
@@ -143,24 +161,6 @@
   </build>
 
   <dependencies>
-    <dependency>
-      <groupId>com.github.gwtmaterialdesign</groupId>
-      <artifactId>gwt-material</artifactId>
-      <version>${gwt-material.version}</version>
-    </dependency>
-
-    <dependency>
-      <groupId>com.workingflows.js</groupId>
-      <artifactId>jquery</artifactId>
-      <version>1.0</version>
-    </dependency>
-
-    <dependency>
-      <groupId>org.jboss.gwt.elemento</groupId>
-      <artifactId>elemento-core</artifactId>
-      <version>0.1.4</version>
-    </dependency>
-
     <!-- GWT -->
     <dependency>
       <groupId>com.google.gwt</groupId>
@@ -171,11 +171,13 @@
       <groupId>com.google.gwt</groupId>
       <artifactId>gwt-user</artifactId>
       <version>${gwt.version}</version>
+      <scope>provided</scope>
     </dependency>
     <dependency>
       <groupId>com.google.gwt</groupId>
       <artifactId>gwt-dev</artifactId>
       <version>${gwt.version}</version>
+      <scope>provided</scope>
     </dependency>
 
     <!-- Testing -->
